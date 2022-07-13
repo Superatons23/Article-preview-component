@@ -33,6 +33,7 @@ body {
   background-image: url(../images/drawers.jpg);
   height: 205px;
   width: 100%;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center -15px;
   border-radius: 10px 10px 0 0;
@@ -152,12 +153,61 @@ h4 {
   background-image: url(../images/icon-pinterest.svg);
 }
 .attribution {
-  font-size: 11px;
+  margin-top: 10px;
+  font-size: 12px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  color: var(--very-dark-grayish-blue);
 }
 
 @media (min-width: 1020px) {
+  .card {
+    width: 724.2px;
+    display: flex;
+    flex-direction: row;
+  }
+  .card-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .img-top {
+    height: 280px;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom left;
+    object-position: 0 0 0;
+    border-radius: 10px 0 0 10px;
+  }
+  .footer {
+    position: relative;
+  }
+  .footer-secondary {
+    border-radius: 10px;
+    position: absolute;
+    top: -175%;
+    left: 60%;
+  }
+  .footer-main {
+    display: flex;
+    padding-top: 0;
+  }
+  .footer-secondary::after {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+  }
+  .footer-secondary::after {
+    margin-left: -5px;
+    top: 100%;
+    left: 50%;
+    border-color: var(--very-dark-grayish-blue) transparent transparent
+      transparent;
+  }
+
+  .btn-white {
+    display: none;
+  }
 }
